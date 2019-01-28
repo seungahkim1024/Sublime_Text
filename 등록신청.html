@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+input[type=text], select {
+  width: 100%;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+input[type=submit][id=btn1] {
+  width: 100%;
+  background-color: green;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+input[type=submit][id=btn2] {
+  width: 100%;
+  background-color: red;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: red;
+}
+
+div {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+ 
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  background-color: white;
+  padding: 30px;
+}
+.grid-item{
+  background-color: white;
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 20px;
+  font-size: 20px;
+  text-align: center;
+}
+#item2{
+  grid-column-start: 2;
+  grid-column-end: 5;
+}
+#item4{
+  grid-column-start: 2;
+  grid-column-end: 5;
+}
+#item6{
+  grid-column-start: 2;
+  grid-column-end: 5;
+}
+#item8{
+  grid-column-start: 2;
+  grid-column-end: 5;
+}
+#item10{
+  grid-column-start: 2;
+  grid-column-end: 5;
+}
+#item11{
+  grid-column-start: 1;
+  grid-column-end: 3;
+}
+#item12{
+  grid-column-start: 3;
+  grid-column-end: 5;
+}
+
+</style>
+</head>
+<body>
+<div id="register-form">
+	<h1>사원 등록</h1>
+	<p>등록화면</p>
+	<form action="employee.do">
+	<div class="grid-container">
+  <div class="grid-item" id="item1">사원번호</div>
+  <div class="grid-item" id="item2">
+    <input type="text" name="employeeId" />
+  </div>
+  <div class="grid-item" id="item3">이 름</div>
+  <div class="grid-item" id="item4">
+    <input type="text" name="name" />
+  </div>
+  <div class="grid-item" id="item5">매니저</div>
+  <div class="grid-item" id="item6">
+    <input type="text" name="manager" />
+  </div>
+   <div class="grid-item" id="item7">생년월일</div>
+  <div class="grid-item" id="item8">
+    <input type="text" name="birthDate" />
+  </div>
+  <div class="grid-item" id="item9">상세</div>
+  <div class="grid-item" id="item10">
+    <input type="text" name="notes" />
+  </div>
+    <div class="grid-item" id="item11">
+      <input type="submit" id="btn1" value="확인" />
+    </div>
+    <div class="grid-item" id="item12">
+      <input type="submit" id="btn2" value="취소" />
+    </div>
+</div>
+</form>
+<script>
+$('#confirm_btn').click(function(){
+  alert('확인버튼 클릭!!');
+});
+</script>
+</body>
+</html>
